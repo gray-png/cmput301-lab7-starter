@@ -1,9 +1,12 @@
 package com.example.androiduitesting;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout nameField;
     ArrayAdapter<String> cityAdapter;
     ArrayList<String> dataList;
+
+    public AdapterView.OnItemClickListener messageClickedHandler = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            NavHostFragment.findNavController(MainActivity.this).navigate(R.id.action_main_to_show);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
