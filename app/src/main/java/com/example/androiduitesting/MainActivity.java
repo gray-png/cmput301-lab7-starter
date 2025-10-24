@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public AdapterView.OnItemClickListener messageClickedHandler = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            NavHostFragment.findNavController(MainActivity.this).navigate(R.id.action_main_to_show);
+            //NavHostFragment.findNavController(MainActivity.this).navigate(R.id.action_main_to_show);
         }
     };
 
